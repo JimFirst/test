@@ -203,6 +203,7 @@ export function fetch(options) {
                             // })
                             Notification({
                                 title: '警告',
+                                dangerouslyUseHTMLString: true,
                                 message: res.message,
                                 type: 'warning',
                                 duration:'2000'

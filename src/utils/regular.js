@@ -123,11 +123,6 @@ export function splitArr(arr){
     return newArr;
 }
 
-export const colors=['#D3381C','#4A90E2','#FCC800','#1E50A2','#EE7800','#006E54','#80ABA9','#CA6924','#84A2D4','#1F3134',
-'#69821B','#EC6D51','#B8D200','#758A99','#89C3EB','#4C6CB3','#F8E71C','#192F60','#ED5736','#0D50F4',
-'#FFA400','#9B4400','#0C8918','#a1afc9','#C93756','#9ED900','#44CEF6','#003472','#FFC64B','#B7282E',
-'#4C8DAE','#F9906F','#65318E','#82AE46','#3E62AD','#CD5E3C','#393E4F','#E6B422','#0094C8','#BCE672'
-]
 
 // 密码等级*/
 export function getPwdRank (szPwd) {

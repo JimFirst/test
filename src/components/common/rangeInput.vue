@@ -1,5 +1,5 @@
 <template>
-    <div class="content" v-clickoutside="hanldeBlur">
+    <div class="content" @change="handleChange" v-clickoutside="hanldeBlur">
         <input v-model="iptOne" @focus="handleFocus" @input="handleIpt" @change="oneChange" onkeyup="value=value.replace(/[^0-9.]/g,'')" :placeholder="placeholderOne" :type="type">
         <span>{{to}}</span>
         <input v-model="iptTwo" @focus="handleFocus" @input="handleIpt" @change="twoChange" onkeyup="value=value.replace(/[^0-9.]/g,'')" :placeholder="placeholderTwo" :type="type">
@@ -115,6 +115,9 @@ export default {
             if(value<parseFloat(this.iptOne)){
                 this.$emit('input',[this.iptOne,this.iptOne])
             }
+        },
+        handleChange(){
+            this.$emit('change',this.value)
         }
     }
 }
@@ -131,6 +134,7 @@ export default {
         border: 1px solid #999;
         height: 28px;
         line-height: 28px;
+        max-width: 280px;
         padding: 0 16px;
     }
     input{
