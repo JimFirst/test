@@ -1,14 +1,14 @@
 const modelB = [
     {
-        path: 'c',
-        name: 'c',
+        path: 'ba',
+        name: 'ba',
         meta: {
             name: '模块b-1'
         },
         component: () => import('@/components/modelB/b_1.vue')
     }, {
-        path: 'd',
-        name: 'd',
+        path: 'bb',
+        name: 'bb',
         meta: {
             name: '模块b-2'
         },

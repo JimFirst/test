@@ -2,9 +2,9 @@
     <div class="main">
         <div style="width:300px">
             <el-menu router>
-                <el-submenu v-for="submenus in menus"
-                    :index="submenus.path"
-                    :key="submenus.index">
+                <el-submenu v-for="(submenus,index) in menus"
+                    :index="submenus.name"
+                    :key="index">
                     <template slot="title">{{submenus.meta.name}}</template>
                     <el-menu-item v-for="(item, subIndex) in submenus.children" :key="subIndex"
                         :index="submenus.path+'/'+item.path">
@@ -21,23 +21,20 @@
                 <router-view>
                 
                 </router-view>
-
             </div>
         </div>
     </div>
 </template>
 
 <script>
-import { asyncRoutes } from "../router/index.js";
 export default {
   name: "index",
   data() {
     return {
-      menus: asyncRoutes
+      menus: this.$store.state.permissions.addRoutes
     };
   },
   created() {
-    console.log(111,asyncRoutes);
   }
 };
 </script>
